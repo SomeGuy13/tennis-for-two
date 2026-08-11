@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://cubroewevrf3x"]
 
+[ext_resource type="Script" uid="uid://ddlrunqkufy48" path="res://scripts/paddle.gd" id="1_3xiby"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ksya"]
 
 [node name="Paddle" type="Node2D" unique_id=1166998883]
 scale = Vector2(1, 5)
+script = ExtResource("1_3xiby")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=997731165]
 

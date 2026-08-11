@@ -8,9 +8,13 @@
 
 [node name="Paddle1" parent="." unique_id=1166998883 instance=ExtResource("1_o5qli")]
 position = Vector2(128, 328)
+down_input = "paddle_1_down"
+up_input = "paddle_1_up"
 
 [node name="Paddle2" parent="." unique_id=755511252 instance=ExtResource("1_o5qli")]
 position = Vector2(1024, 320)
+down_input = "paddle_2_down"
+up_input = "paddle_2_up"
 
 [node name="Puck" parent="." unique_id=1241699113 instance=ExtResource("2_0wfyh")]
 position = Vector2(576, 320)
