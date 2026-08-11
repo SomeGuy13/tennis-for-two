@@ -2,4 +2,4 @@
 
 02 - Brought scripts over and setup level
 
-03 - 
+03 - Paddles move with input

@@ -2,10 +2,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ksya"]
 
-[node name="Wall" type="Node2D" unique_id=1166998883]
+[node name="Wall" type="Node2D" unique_id=1166998883 groups=["wall"]]
 scale = Vector2(50, 0.5)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=997731165]
+[node name="Area2D" type="Area2D" parent="." unique_id=997731165 groups=["wall"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2087937577]
 shape = SubResource("RectangleShape2D_7ksya")

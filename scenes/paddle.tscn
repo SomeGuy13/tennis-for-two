@@ -8,7 +8,7 @@
 scale = Vector2(1, 5)
 script = ExtResource("1_3xiby")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=997731165]
+[node name="Area2D" type="Area2D" parent="." unique_id=997731165 groups=["paddle"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2087937577]
 shape = SubResource("RectangleShape2D_7ksya")
