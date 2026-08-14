@@ -12,6 +12,8 @@ func _check_dependencies():
 
 func _ready() -> void:
 	_check_dependencies()
+	
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func set_game_state(new_state: GameState) -> void:
 	if new_state == _current_state:

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ddx60w6ctgum0"]
+
+[ext_resource type="Script" uid="uid://fu3obijkq3iv" path="res://scripts/player_score_label.gd" id="1_ynd2y"]
+
+[node name="Player1Score" type="Label" unique_id=1875060197]
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 64
+text = "0
+"
+script = ExtResource("1_ynd2y")
