@@ -12,3 +12,6 @@ signal point_scored(player: String)
 signal game_paused(state: bool)
 
 signal game_state_changed(state: GameManager.GameState)
+
+signal scene_load_started(path: String)
+signal scene_load_complete(path: String)

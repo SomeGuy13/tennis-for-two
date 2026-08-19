@@ -1,30 +1,32 @@
-[gd_scene format=3 uid="uid://dx0q5aedg1qqn"]
+[gd_scene format=3 uid="uid://bfj5opch3hm78"]
 
-[ext_resource type="PackedScene" uid="uid://cubroewevrf3x" path="res://scenes/paddle.tscn" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://defnqb310kntw" path="res://scenes/puck.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://b1rg0iqqity0d" path="res://scenes/wall.tscn" id="3_sugp2"]
-[ext_resource type="PackedScene" uid="uid://ddx60w6ctgum0" path="res://scenes/player_score_label.tscn" id="4_jyhfs"]
-[ext_resource type="Script" uid="uid://dm33bx0cvdumd" path="res://scripts/game_pause_screen.gd" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://c7kw5eqe32j0e" path="res://scripts/main.gd" id="1_h36r5"]
+[ext_resource type="PackedScene" uid="uid://cubroewevrf3x" path="res://scenes/paddle.tscn" id="2_g507w"]
+[ext_resource type="PackedScene" uid="uid://defnqb310kntw" path="res://scenes/puck.tscn" id="3_qsckw"]
+[ext_resource type="PackedScene" uid="uid://b1rg0iqqity0d" path="res://scenes/wall.tscn" id="4_sxunu"]
+[ext_resource type="PackedScene" uid="uid://ddx60w6ctgum0" path="res://scenes/player_score_label.tscn" id="5_ui3a4"]
+[ext_resource type="Script" uid="uid://dm33bx0cvdumd" path="res://scripts/game_pause_screen.gd" id="6_78svr"]
 
 [node name="Node2D" type="Node2D" unique_id=1755304920]
+script = ExtResource("1_h36r5")
 
-[node name="Paddle1" parent="." unique_id=1166998883 instance=ExtResource("1_o5qli")]
+[node name="Paddle1" parent="." unique_id=1166998883 instance=ExtResource("2_g507w")]
 position = Vector2(128, 320)
 down_input = "paddle_1_down"
 up_input = "paddle_1_up"
 
-[node name="Paddle2" parent="." unique_id=755511252 instance=ExtResource("1_o5qli")]
+[node name="Paddle2" parent="." unique_id=755511252 instance=ExtResource("2_g507w")]
 position = Vector2(1024, 320)
 down_input = "paddle_2_down"
 up_input = "paddle_2_up"
 
-[node name="Puck" parent="." unique_id=1241699113 instance=ExtResource("2_0wfyh")]
+[node name="Puck" parent="." unique_id=1241699113 instance=ExtResource("3_qsckw")]
 position = Vector2(576, 320)
 
-[node name="Wall1" parent="." unique_id=1126349720 instance=ExtResource("3_sugp2")]
+[node name="Wall1" parent="." unique_id=1126349720 instance=ExtResource("4_sxunu")]
 position = Vector2(576, 72)
 
-[node name="Wall2" parent="." unique_id=1653797912 instance=ExtResource("3_sugp2")]
+[node name="Wall2" parent="." unique_id=1653797912 instance=ExtResource("4_sxunu")]
 position = Vector2(576, 568)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=669160008]
@@ -45,7 +47,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Player1Score" parent="CanvasLayer/Score Container/MarginContainer" unique_id=1875060197 instance=ExtResource("4_jyhfs")]
+[node name="Player1Score" parent="CanvasLayer/Score Container/MarginContainer" unique_id=1875060197 instance=ExtResource("5_ui3a4")]
 layout_mode = 2
 assigned_player = "player 1"
 
@@ -59,7 +61,7 @@ offset_left = -40.0
 offset_bottom = 88.0
 grow_horizontal = 0
 
-[node name="Player2Score" parent="CanvasLayer/Score Container/MarginContainer2" unique_id=1928770743 instance=ExtResource("4_jyhfs")]
+[node name="Player2Score" parent="CanvasLayer/Score Container/MarginContainer2" unique_id=1928770743 instance=ExtResource("5_ui3a4")]
 layout_mode = 2
 assigned_player = "player 2"
 
@@ -78,7 +80,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("5_tbgi4")
+script = ExtResource("6_78svr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/GamePauseScreen" unique_id=1373897814]
 layout_mode = 1
