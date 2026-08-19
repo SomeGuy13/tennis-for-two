@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var puck_velocity: Vector2 = Vector2(-300, 0)
-@export var half_paddle_height: float = 1
+@export var half_paddle_height: float = 0.75
 @export var puck_bounce_speed = 1
 
 var starting_position: Vector2

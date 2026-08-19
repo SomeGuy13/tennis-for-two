@@ -9,6 +9,8 @@ var _enabled: bool = true
 var _actions: Array[String] = []
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 	_check_dependencies()
 	_check_input_actions(_actions)
 

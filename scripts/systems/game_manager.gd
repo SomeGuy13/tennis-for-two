@@ -3,7 +3,7 @@ extends Node
 var _dependencies = ["EventBus", "InputSystem"]
 enum GameState { MENU, LOADING, PLAYING, PAUSED, GAME_OVER, CUTSCENE }
 
-var _current_state: GameState = GameState.MENU
+var _current_state: GameState = GameState.PLAYING
 
 func _check_dependencies():
 	for dependance in _dependencies:
@@ -11,6 +11,8 @@ func _check_dependencies():
 			push_error("Autoload %s does not exist" % dependance)
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 	_check_dependencies()
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -24,7 +26,7 @@ func set_game_state(new_state: GameState) -> void:
 	match new_state:
 		GameState.PAUSED:
 			get_tree().paused = true
-			InputSystem.set_enabled(false)
+			#InputSystem.set_enabled(true)
 		GameState.PLAYING:
 			get_tree().paused = false
 			InputSystem.set_enabled(true)
