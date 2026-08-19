@@ -49,6 +49,7 @@ offset_bottom = 40.0
 
 [node name="Player1Score" parent="CanvasLayer/Score Container/MarginContainer" unique_id=1875060197 instance=ExtResource("4_jyhfs")]
 layout_mode = 2
+text = ""
 assigned_player = "player 1"
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Score Container" unique_id=843329356]
@@ -63,6 +64,7 @@ grow_horizontal = 0
 
 [node name="Player2Score" parent="CanvasLayer/Score Container/MarginContainer2" unique_id=1928770743 instance=ExtResource("4_jyhfs")]
 layout_mode = 2
+text = ""
 assigned_player = "player 2"
 
 [node name="GamePauseScreen" type="Control" parent="CanvasLayer" unique_id=1840468029]

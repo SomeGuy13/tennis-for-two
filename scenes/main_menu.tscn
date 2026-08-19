@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://52t2rwmeilf5"]
 
 [ext_resource type="Script" uid="uid://bfauvadg33km5" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://1gnkitl2oa3i" path="res://scenes/no_player.tscn" id="2_ekxnf"]
 
 [node name="MainMenu" type="Control" unique_id=982915765]
 layout_mode = 3
@@ -12,14 +13,14 @@ grow_vertical = 2
 script = ExtResource("1_l6cm7")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=318263365]
-custom_minimum_size = Vector2(0, 200)
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -399.0
 offset_right = 399.0
-offset_bottom = 132.0
+offset_bottom = 200.0
 grow_horizontal = 2
 
 [node name="GameTitle" type="Label" parent="MarginContainer" unique_id=1732446918]
@@ -35,9 +36,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -150.5
-offset_top = -369.0
-offset_right = 150.5
+offset_left = -250.0
+offset_top = -400.0
+offset_right = 250.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -46,35 +47,38 @@ layout_mode = 2
 
 [node name="1 Player Play" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1275612873]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 38
 text = "1 Player Play"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer2/VBoxContainer" unique_id=19463898]
-custom_minimum_size = Vector2(500, 15)
+custom_minimum_size = Vector2(0, 5)
 layout_mode = 2
 
 [node name="2 Player Play" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=668175692]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 38
 text = "2 Player Play"
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer2/VBoxContainer" unique_id=315179851]
-custom_minimum_size = Vector2(500, 15)
+custom_minimum_size = Vector2(0, 5)
 layout_mode = 2
 
 [node name="Settings" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=2139206580]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 38
 text = "Settings"
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer2/VBoxContainer" unique_id=1326412534]
-custom_minimum_size = Vector2(500, 15)
+custom_minimum_size = Vector2(0, 5)
 layout_mode = 2
 
 [node name="Quit" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=670042046]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 38
 text = "Quit"
+
+[node name="Node2D" parent="." unique_id=1755304920 instance=ExtResource("2_ekxnf")]
+z_index = -10
 
 [connection signal="button_down" from="MarginContainer2/VBoxContainer/1 Player Play" to="." method="_two_player_play_button_down"]
 [connection signal="button_down" from="MarginContainer2/VBoxContainer/2 Player Play" to="." method="_one_player_play_button_down"]

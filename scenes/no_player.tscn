@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://1gnkitl2oa3i"]
+
+[ext_resource type="Script" uid="uid://c7kw5eqe32j0e" path="res://scripts/main.gd" id="1_x7u3b"]
+[ext_resource type="PackedScene" uid="uid://cubroewevrf3x" path="res://scenes/paddle.tscn" id="2_u3uqs"]
+[ext_resource type="PackedScene" uid="uid://defnqb310kntw" path="res://scenes/puck.tscn" id="3_ysyif"]
+[ext_resource type="PackedScene" uid="uid://b1rg0iqqity0d" path="res://scenes/wall.tscn" id="4_sahx3"]
+
+[node name="Node2D" type="Node2D" unique_id=1755304920]
+script = ExtResource("1_x7u3b")
+
+[node name="Paddle1" parent="." unique_id=1166998883 instance=ExtResource("2_u3uqs")]
+position = Vector2(128, 320)
+down_input = "paddle_1_down"
+up_input = "paddle_1_up"
+automatic = true
+paddle_side_mult = -1
+
+[node name="Paddle2" parent="." unique_id=755511252 instance=ExtResource("2_u3uqs")]
+position = Vector2(1024, 320)
+down_input = "paddle_2_down"
+up_input = "paddle_2_up"
+automatic = true
+
+[node name="Puck" parent="." unique_id=1241699113 instance=ExtResource("3_ysyif")]
+position = Vector2(576, 320)
+puck_velocity = Vector2(-300, 50)
+puck_bounce_speed = 2
+
+[node name="Wall1" parent="." unique_id=1126349720 instance=ExtResource("4_sahx3")]
+position = Vector2(576, 72)
+
+[node name="Wall2" parent="." unique_id=1653797912 instance=ExtResource("4_sahx3")]
+position = Vector2(576, 568)
